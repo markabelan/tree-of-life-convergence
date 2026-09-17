@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Tree of Life Keeps Inventing the Same Tricks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="editorial">
+        <p class="kicker">Biology</p>
+        <h1>The tree of life keeps inventing the same tricks</h1>
+        <p class="dek">
+          Convergent evolution is what happens when distant branches arrive at
+          the same solution — wings, eyes, bodies of many cells — without
+          sharing the trait in a common ancestor.
+        </p>
+        <div class="byline">
+          <p class="byline-name">
+            By
+            <a class="byline-author" href="https://www.quantamagazine.org/authors/markbelan/">
+              <img class="byline-photo" src="img/mark-belan.png" alt="" width="36" height="36" />
+              <span>Mark Belan</span>
+            </a>
+            and
+            <a class="byline-author" href="https://www.quantamagazine.org/authors/hannah-waters/">
+              <img class="byline-photo" src="img/hannah-waters.png" alt="" width="36" height="36" />
+              <span>Hannah Waters</span>
+            </a>
+            <time datetime="2026-09-16">September 16, 2026</time>
+          </p>
+        </div>
+        <hr class="rule" />
+        <p class="lede">
+          Life is one tree, not a ladder. Most traits travel with ancestry. A
+          few problems are so useful that separate lineages solve them on their
+          own. That echo — the same idea, written onto far-apart twigs — is
+          convergent evolution.
+        </p>
+        <p class="lede">
+          This model is that tree, spinning in three dimensions. Bacteria,
+          archaea, and eukaryotes fan into space from a shared origin. Choose a
+          trait. The distant tips that evolved it will light; the rest of the
+          tree stays as a paler sketch. The space between those tips is how far
+          evolution traveled to invent the idea twice.
+        </p>
+
+        <section id="traits" class="trait-box" aria-label="Convergent traits">
+          <div class="trait-box-head">
+            <h2 class="trait-box-title">Click a trait to see convergence on the tree of life</h2>
+          </div>
+          <div class="trait-list">
+            <button class="trait" type="button" data-trait="motors" aria-pressed="false">
+              Swimming motors
+            </button>
+            <button class="trait" type="button" data-trait="heat" aria-pressed="false">
+              Heat-loving life
+            </button>
+            <button class="trait" type="button" data-trait="carbon" aria-pressed="false">
+              Carbon from air
+            </button>
+            <button class="trait" type="button" data-trait="carcinization" aria-pressed="false">
+              Carcinization
+            </button>
+            <button class="trait" type="button" data-trait="antifreeze" aria-pressed="false">
+              Antifreeze
+            </button>
+            <button class="trait" type="button" data-trait="c4" aria-pressed="false">
+              C4 photosynthesis
+            </button>
+            <button class="trait" type="button" data-trait="electric" aria-pressed="false">
+              Electric fish
+            </button>
+            <button class="trait" type="button" data-trait="tongues" aria-pressed="false">
+              Ballistic tongues
+            </button>
+            <button class="trait" type="button" data-trait="intelligence" aria-pressed="false">
+              Intelligence
+            </button>
+            <button class="trait" type="button" data-trait="echolocation" aria-pressed="false">
+              Echolocation
+            </button>
+            <button class="trait" type="button" data-trait="pheromone" aria-pressed="false">
+              Sex attractant
+            </button>
+            <button class="trait" type="button" data-trait="doppelgangers" aria-pressed="false">
+              Meadowlarks & longclaws
+            </button>
+            <button class="trait" type="button" data-trait="cavities" aria-pressed="false">
+              Cavity nesters
+            </button>
+          </div>
+        </section>
+      </aside>
+
+      <section id="stage" aria-label="Three-dimensional tree of life">
+        <a
+          class="quanta-logo"
+          href="https://www.quantamagazine.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/quanta-logo.svg" alt="Quanta Magazine" />
+        </a>
+        <div id="tree-root"></div>
+        <div id="species-layer" hidden>
+          <div class="trait-headline">
+            <p class="card-kicker">Convergent trait</p>
+            <h2></h2>
+            <p class="trait-dek"></p>
+          </div>
+          <svg class="leader-svg" aria-hidden="true"></svg>
+          <div class="species-cards"></div>
+        </div>
+        <div class="stage-legend" aria-hidden="true">
+          <span><i class="swatch euk"></i>Eukaryotes</span>
+          <span><i class="swatch arc"></i>Archaea</span>
+          <span><i class="swatch bac"></i>Bacteria</span>
+        </div>
+        <p class="stage-hint">Drag to turn</p>
+      </section>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
